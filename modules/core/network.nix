@@ -1,12 +1,11 @@
 { config, pkgs, lib, ... }: 
 {
   networking = {
-    hostName = "miyavour";
+    hostName = "dnsbox";
     networkmanager.enable = true;
     nftables.enable = true;
     firewall = {
       enable = true;
-      trustedInterfaces = [ "virbr0" ];
       allowedUDPPorts = [];
       allowedTCPPorts = [];
     };
