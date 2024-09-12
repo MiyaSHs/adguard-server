@@ -6,7 +6,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
   let
-    username = "miya";
+    username = "dnsman";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -16,7 +16,7 @@
   in
   {
     nixosConfigurations = {
-      desktop = lib.nixosSystem {
+      server = lib.nixosSystem {
         inherit system;
         specialArgs = { host="${username}"; inherit inputs username; };
         modules = [ 
