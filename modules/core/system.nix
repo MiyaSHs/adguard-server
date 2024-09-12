@@ -11,7 +11,6 @@
       options = "--delete-older-than 7d";
     };
   };
-  chaotic.nyx.cache.enable = true;
   zramSwap.enable = true;
   systemd.oomd.enable = true;
   systemd.enableCgroupAccounting = true;
